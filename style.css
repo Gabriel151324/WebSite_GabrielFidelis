@@ -342,6 +342,7 @@
  .card__container {
         display: grid;
         row-gap: 3.5rem;
+        justify-content: center;
  }
 
  .card__article {
@@ -464,6 +465,7 @@
  .footer {
         padding-block: 2.5rem;
         background-color: var(--container-color);
+        margin-top: 100px;
  }
 
  .footer__content {
@@ -572,7 +574,7 @@
 
  /*=============== BREAKPOINTS ===============*/
  /* For small devices */
- @media screen and (max-width: 340px) {
+ @media screen and (max-width: 399px) {
         .container {
                margin-inline: 1rem
         }
@@ -582,19 +584,31 @@
                padding: 1rem;
         }
 
+        .card__nome {
+              font-size: var(--h1-font-size);
+              text-align: center;
+              margin-bottom: 50px;
+       }
+
         .footer__data {
                grid-template-columns: max-content
         }
  }
 
  /* For medium devices */
- @media screen and (min-width: 576px) {
+ @media screen and (min-width: 400px) {
 
         .home__container,
         .about__container {
                grid-template-columns: 400px;
                justify-content: center;
         }
+
+        .card__nome {
+              font-size: var(--h1-font-size);
+              text-align: center;
+              margin-bottom: 50px;
+       }
 
         .footer__container {
                margin-top: 100px;
@@ -639,7 +653,8 @@
         }
 
         .card__container {
-               grid-template-columns: repeat(3, 1fr);
+               display: flex;
+               justify-content: center;
         }
 
         .card__nome {
